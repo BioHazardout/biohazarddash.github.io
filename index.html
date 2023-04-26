@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="Styles.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    
+    <title>Japi Dashboard</title> 
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Japi Express</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span class="link-name">ENVIOS POR FECHA</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-calender"></i>
+                    <span class="link-name">ENVIOS POR DÍA</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-truck"></i>
+                    <span class="link-name">ADMINISTRAR RECOJOS</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-shopping-cart-alt"></i>
+                    <span class="link-name">HISTORIAL RECOJOS</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-store"></i>
+                    <span class="link-name">ALMACEN JAPI</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-store-alt"></i>
+                    <span class="link-name">SOLICITUD DE ALMACEN</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-shop"></i>
+                    <span class="link-name">ADMINISTRAR ALMACEN</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-shopping-bag"></i>
+                    <span class="link-name">ADMINISTRAR ENTREGAS</span>
+                </a></li>               
+                <li><a href="#">
+                    <i class="uil uil-user-plus"></i>
+                    <span class="link-name">REGISTRO MOTORIZADO</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-check-circle"></i>
+                    <span class="link-name">ACTIVACIÓN DE CUENTAS</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-clipboard-notes"></i>
+                    <span class="link-name">LISTA DE COLABORADORES</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-shield-check"></i>
+                    <span class="link-name">LISTA DE ADMINISTRADORES</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-user-exclamation"></i>
+                    <span class="link-name">USUARIOS EXTERNOS</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Cerrar Cesion</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Modo Oscuro</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+            
+            <img src="foto1.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div>
+                    <div class="text">
+                        <span class="text"><h2>Buscar por fecha</h2></span>
+                         <div class="text-search">
+
+                            <div class="space">
+                                <span class="text"> <h3>FECHA DE CONSULTA</h3></span>
+
+                                <div class="date"> 
+                                    <h4>DESDE</h4>
+                                    <input type="date">
+                                </div>
+
+                                <div class="date">
+                                    <h4>HASTA</h4>
+                                    <input type="date">
+                                </div>
+                            </div>
+
+                            <div class="space">   
+                                <span class="text"><h3> ELIGE UN CAMPO </h3> </span>
+                                <form id="form" action="post" class="form">
+                                    <select class="list" name="select1" id="">
+                                        <option  value="disabled selected">Distrito</option>
+                                        <option value="ejemplo1">Lima</option>
+                                        <option value="ejemplo2">Ate</option>
+                                        <option value="ejemplo3">Callao</option>
+                                        <option value="ejemplo4">Surco</option>
+                                        <option value="ejemplo5">San Luis</option>
+                                    </select>
+                                </form>
+                            </div> 
+                            
+                            <div class="space">
+                                <span class="text"> <h3>FILTRAR </h3>
+                                    <div class="search-box2">
+                                        <input type="text" placeholder="Buscar...">
+                                    </div>
+                                </span>
+                            </div>   
+                            <div class="right-button">
+                                <a href="#" class="button-search">
+                                    BUSCAR 
+                                </a> 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabla-container">
+                
+                <span class="text"><h2>Envios por fecha</h2></span>
+                
+                    <table class="tabla__content">
+                        <thead >
+                            <tr >
+                                <th class="separacion">
+                                    N°
+                                </th>
+                                <th class="separacion">
+                                    Vendedor
+                                </th>
+                                <th class="separacion">
+                                    Producto
+                                </th>
+                                <th class="separacion">
+                                    Cantidad
+                                </th>
+                                <th class="separacion">
+                                    Comprador
+                                </th>
+                                <th class="separacion">
+                                    Monto total
+                                </th>
+                                <th class="separacion">
+                                    Metodo de pago
+                                </th>
+
+                                <th class="separacion">
+                                    Modo de entrega
+                                </th>
+
+                                <th class="separacion">
+                                    Estado
+                                </th>
+                                <th class="separacion">
+                                    Estado
+                                </th>
+                                <th class="separacion">
+                                    Detalle
+                                </th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td data-label=" N°">
+                                    1
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button">
+                                        Entregado 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                        <i class="uil uil-edit"></i>                                       
+                                    </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    2
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button">
+                                        Entregado 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                        <i class="uil uil-edit"></i>                                       
+                                    </a> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label=" N°">
+                                    3
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button">
+                                        Entregado 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                      <a href="#" class="button-detail">
+                                          <i class="uil uil-edit"></i>                                       
+                                       </a> 
+                                 </td>
+                                    
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    4
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button">
+                                        Entregado 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                        <i class="uil uil-edit"></i>                                       
+                                    </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    5
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button">
+                                        Entregado
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                        <i class="uil uil-edit"></i>                                       
+                                    </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    6
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </td>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button-p">
+                                        Pendiente
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                       <a href="#" class="button-detail">
+                                        <i class="uil uil-edit"></i>                                       
+                                     </a> 
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label=" N°">
+                                    7
+                                </td>
+                                <td data-label="Vendedor">
+                                    Pedro Arroyo
+                                </td >
+                                <td data-label="Producto">
+                                    Ropa
+                                </td>
+                                <td data-label="Cantidad">
+                                    1
+                                </td>
+                                <td data-label="Comprador">
+                                    Ana Chunque
+                                </data-label=>
+                                <td data-label="Monto total">
+                                    s/.15.00
+                                </td>
+                                <td data-label="Metodo de pago">
+                                    no tiene
+                                </td>
+                                <td data-label="Modo de entrega">
+                                    contra entrega
+                                </td>
+                                <td data-label="Estado">
+                                    pendiente
+                                </td>
+                                <td data-label="Agregar motivo" class="td-button">
+                                    <a href="#" class="button-p">
+                                        Pendiente 
+                                    </a> 
+                                </td>
+                                <td data-label="Detalle">
+                                    <a href="#" class="button-detail">
+                                     <i class="uil uil-edit"></i>                                       
+                                  </a> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>              
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
